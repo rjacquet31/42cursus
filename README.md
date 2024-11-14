@@ -1,4 +1,4 @@
-#42cursus
+# 42cursus
 
 | Circle | Project         | Language   |
 |--------|------------------|------------|
