@@ -8,7 +8,7 @@
 | --- | --- | --- |
 ---
 
-# 🧑‍🎓 42 Common Core Projects
+#  42 Common Core Projects
 
 <div align="center">
   <a href="https://github.com/mpeyre-s/42_libft"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/libft_bonus.svg"/></a>
@@ -20,7 +20,6 @@
   <a href="https://github.com/mpeyre-s/42_push_swap"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/push_swap.svg"/></a>
   <a href="https://github.com/mpeyre-s/42_minishell"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/minishell.svg"/></a>
   </br></br>
-  <span>➡️ Collection of project badges available here : <a href="https://github.com/mpeyre-s/42_project_badges">mpeyre-s/42_project_badges</a></span>
 </div>
 
 ---
