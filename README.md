@@ -11,13 +11,10 @@
 
 <div align="center">
   <a href="https://github.com/rjacquet31/Libft"><img src="https://github.com/rjacquet31/image/blob/main/badge/libftm.png"/></a>
-  <a href="https://github.com/mpeyre-s/42_printf"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/ft_printf.svg"/></a>
-  <a href="https://github.com/mpeyre-s/42_get_next_line"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/get_next_line_bonus.svg"/></a>
-  <a href="https://github.com/mpeyre-s/42_born2beroot"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/born2beroot.svg"/></a>
-  <a href="https://github.com/mpeyre-s/42_fract_ol"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/fractol_bonus.svg"/></a>
-  <a href="https://github.com/mpeyre-s/42_minitalk"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/minitalk_bonus.svg"/></a>
-  <a href="https://github.com/mpeyre-s/42_push_swap"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/push_swap.svg"/></a>
-  <a href="https://github.com/mpeyre-s/42_minishell"><img src="https://github.com/mpeyre-s/42_project_badges/raw/main/badges/minishell.svg"/></a>
+  <a href="https://github.com/rjacquet31/ft_printf"><img src="https://github.com/rjacquet31/image/blob/main/badge/ft_printfe.png"/></a>
+  <a href="https://github.com/rjacquet31/get_next_line"><img src="https://github.com/rjacquet31/image/blob/main/badge/get_next_linem.png"/></a>
+  <a href="https://github.com/rjacquet31/Born2beRoot"><img src="https://github.com/rjacquet31/image/blob/main/badge/born2beroote.png"/></a>
+  <a href="https://github.com/rjacquet31/fract-ol"><img src="https://github.com/rjacquet31/image/blob/main/badge/fract-olm.png"/></a>
   </br></br>
 </div>
 
