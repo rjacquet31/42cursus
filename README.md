@@ -2,7 +2,7 @@
 
 ---
 
-# `👋 Hello, Here you can found my project at 42Perpignan`
+# `👋 Hello, Here you can found my projects at 42Perpignan`
 
 | 📧 Email : [rafael.jacquet.31@gmail.com](mailto:rafael.jacquet.31@gmail.com) | 🏫 Campus : [42 Perpignan](https://42perpignan.fr) |
 ---
