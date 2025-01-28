@@ -2,7 +2,7 @@
 
 ---
 
-# `👋 Hello, I'm Rafael Jacquet, a 42 student`
+# `👋 Hello, Here you can found my project at 42Perpignan`
 
 | 📧 Email : [rafael.jacquet.31@gmail.com](mailto:rafael.jacquet.31@gmail.com) | 🔗 LinkedIn : [Rafael Jacquet](https://www.linkedin.com/in/rafael-jacquet-26925a337/) | 🏫 Campus : [42 Perpignan](https://42perpignan.fr) |
 | --- | --- | --- |
