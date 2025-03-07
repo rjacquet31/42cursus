@@ -15,6 +15,10 @@
   <a href="https://github.com/rjacquet31/get_next_line"><img src="https://github.com/rjacquet31/image/blob/main/badge/get_next_linem.png"/></a>
   <a href="https://github.com/rjacquet31/Born2beRoot"><img src="https://github.com/rjacquet31/image/blob/main/badge/born2beroote.png"/></a>
   <a href="https://github.com/rjacquet31/fract-ol"><img src="https://github.com/rjacquet31/image/blob/main/badge/fract-olm.png"/></a>
+  <a href="https://github.com/rjacquet31/minitalk"><img src="https://github.com/rjacquet31/image/blob/main/badge/minitalkm.png"/></a>
+  <a href="https://github.com/rjacquet31/Push_swap"><img src="https://github.com/rjacquet31/image/blob/main/badge/push_swape.png"/></a>
+  <a href="https://github.com/rjacquet31/MiniShell"><img src="https://github.com/rjacquet31/image/blob/main/badge/minishelle.png"/></a>
+  <a href="https://github.com/rjacquet31/Philosophers"><img src="https://github.com/rjacquet31/image/blob/main/badge/philosopherse.png"/></a>
   </br></br>
 </div>
 
