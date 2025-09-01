@@ -19,6 +19,7 @@
   <a href="https://github.com/rjacquet31/Push_swap"><img src="https://github.com/rjacquet31/image/blob/main/badge/push_swape.png"/></a>
   <a href="https://github.com/rjacquet31/MiniShell"><img src="https://github.com/rjacquet31/image/blob/main/badge/minishelle.png"/></a>
   <a href="https://github.com/rjacquet31/Philosophers"><img src="https://github.com/rjacquet31/image/blob/main/badge/philosopherse.png"/></a>
+  <a href="https://github.com/rjacquet31/Cub3d"><img src="https://github.com/rjacquet31/image/blob/main/badge/cub3de.png"/></a>
   </br></br>
 </div>
 
