@@ -1,39 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>42 cursus - Graph interactif</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>42 Cursus — Holy Graph</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <h1>Mon parcours à 42</h1>
 
   <div class="universe" id="universe">
-    <!-- Orbites -->
+    <!-- Orbites visibles (ronds) -->
     <div class="orbit orbit1"></div>
     <div class="orbit orbit2"></div>
     <div class="orbit orbit3"></div>
     <div class="orbit orbit4"></div>
     <div class="orbit orbit5"></div>
 
-    <!-- Projets -->
-    <div class="planet" data-orbit="1" data-url="https://github.com/rjacquet31/Libft">Libft</div>
+    <!-- Centre -->
+    <button class="planet" data-orbit="1" data-angle="0"
+            data-url="https://github.com/rjacquet31/Libft">Libft</button>
 
-    <div class="planet" data-orbit="2" data-url="https://github.com/rjacquet31/get_next_line">get_next_line</div>
-    <div class="planet" data-orbit="2" data-url="https://github.com/rjacquet31/ft_printf">ft_printf</div>
-    <div class="planet" data-orbit="2" data-url="https://github.com/rjacquet31/Born2beRoot">Born2beRoot</div>
+    <!-- Orbite 2 -->
+    <button class="planet" data-orbit="2" data-angle="340"
+            data-url="https://github.com/rjacquet31/get_next_line">get_next_line</button>
+    <button class="planet" data-orbit="2" data-angle="60"
+            data-url="https://github.com/rjacquet31/ft_printf">ft_printf</button>
+    <button class="planet" data-orbit="2" data-angle="200"
+            data-url="https://github.com/rjacquet31/Born2beRoot">Born2beRoot</button>
 
-    <div class="planet" data-orbit="3" data-url="https://github.com/rjacquet31/Push_swap">push_swap</div>
-    <div class="planet" data-orbit="3" data-url="https://github.com/rjacquet31/minitalk">minitalk</div>
-    <div class="planet" data-orbit="3" data-url="https://github.com/rjacquet31/fract-ol">fract-ol</div>
+    <!-- Orbite 3 -->
+    <button class="planet" data-orbit="3" data-angle="330"
+            data-url="https://github.com/rjacquet31/Push_swap">push_swap</button>
+    <button class="planet" data-orbit="3" data-angle="150"
+            data-url="https://github.com/rjacquet31/minitalk">minitalk</button>
+    <button class="planet" data-orbit="3" data-angle="30"
+            data-url="https://github.com/rjacquet31/fract-ol">fract-ol</button>
 
-    <div class="planet" data-orbit="4" data-url="https://github.com/rjacquet31/MiniShell">minishell</div>
-    <div class="planet" data-orbit="4" data-url="https://github.com/rjacquet31/Philosophers">philosophers</div>
+    <!-- Orbite 4 -->
+    <button class="planet" data-orbit="4" data-angle="350"
+            data-url="https://github.com/rjacquet31/MiniShell">minishell</button>
+    <button class="planet" data-orbit="4" data-angle="180"
+            data-url="https://github.com/rjacquet31/Philosophers">philosophers</button>
+    <button class="planet" data-orbit="4" data-angle="260"
+            data-url="https://github.com/rjacquet31/so_long">so_long</button>
 
-    <div class="planet" data-orbit="5" data-url="https://github.com/rjacquet31/miniRT">miniRT</div>
-    <div class="planet" data-orbit="5" data-url="https://github.com/rjacquet31/NetPractice">NetPractice</div>
-    <div class="planet" data-orbit="5" data-url="https://github.com/rjacquet31/Cpp01">Cpp01</div>
+    <!-- Orbite 5 -->
+    <button class="planet" data-orbit="5" data-angle="15"
+            data-url="https://github.com/rjacquet31/miniRT">miniRT</button>
+    <button class="planet" data-orbit="5" data-angle="330"
+            data-url="https://github.com/rjacquet31/cub3d">cub3d</button>
+    <button class="planet" data-orbit="5" data-angle="250"
+            data-url="https://github.com/rjacquet31/NetPractice">NetPractice</button>
+    <button class="planet" data-orbit="5" data-angle="115"
+            data-url="https://github.com/rjacquet31/Cpp01">Cpp01</button>
   </div>
 
   <script src="script.js"></script>

@@ -1,30 +1,62 @@
-const universe = document.getElementById("universe");
-const planets = [...universe.querySelectorAll(".planet")];
+/**
+ * Placement exact façon Holy Graph 42
+ * - On garde le conteneur carré -> orbites rondes
+ * - Chaque planète a:
+ *   - data-orbit : 1..5
+ *   - data-angle : angle en degrés (0° = à droite, anti-horaire)
+ */
 
-const radii = [0, 120, 200, 280, 360]; // correspond aux orbit1..5
-const grouped = [[], [], [], [], [], []];
+const root = document.documentElement;
+const universe = document.getElementById('universe');
+const planets = [...universe.querySelectorAll('.planet')];
 
-// regroupe les planètes selon leur data-orbit
-planets.forEach(p => grouped[p.dataset.orbit].push(p));
+// Rayon des orbites = moitié du diamètre CSS
+const orbitRadiusPx = orbitClass =>
+  parseFloat(getComputedStyle(universe.querySelector(`.${orbitClass}`)).width) / 2;
 
-// place chaque planète en cercle
-grouped.forEach((group, i) => {
-  if (!group.length) return;
-  const radius = radii[i];
-  const count = group.length;
+// Pré-calcul des rayons
+const radii = {
+  1: orbitRadiusPx('orbit1'),
+  2: orbitRadiusPx('orbit2'),
+  3: orbitRadiusPx('orbit3'),
+  4: orbitRadiusPx('orbit4'),
+  5: orbitRadiusPx('orbit5'),
+};
 
-  group.forEach((planet, index) => {
-    const angle = (index / count) * 2 * Math.PI;
-    const x = radius * Math.cos(angle);
-    const y = radius * Math.sin(angle);
-    planet.style.transform = `translate(${x}px, ${y}px)`;
+// Place une planète selon orbite + angle (degrés)
+function place(planet){
+  const orbit = Number(planet.dataset.orbit);
+  const deg   = Number(planet.dataset.angle || 0);
+  const rad   = (deg * Math.PI) / 180;
+
+  const r = radii[orbit] || 0;
+
+  // Coordonnées relatives au centre (0,0)
+  const x = r * Math.cos(rad);
+  const y = r * Math.sin(rad);
+
+  // On stocke dans des CSS custom props pour conserver l'effet hover scale
+  planet.style.setProperty('--tx', `${x}px`);
+  planet.style.setProperty('--ty', `${y}px`);
+  planet.style.transform = `translate(${x}px, ${y}px)`;
+}
+
+// Placement initial
+planets.forEach(place);
+
+// Recalcule au redimensionnement (pour le responsive)
+window.addEventListener('resize', () => {
+  // Recalcule les rayons (le conteneur change avec vmin)
+  ['orbit1','orbit2','orbit3','orbit4','orbit5'].forEach((cls, i) => {
+    radii[i+1] = orbitRadiusPx(cls);
   });
+  planets.forEach(place);
 });
 
-// clic = ouvre le lien GitHub
+// Interaction : clic -> GitHub
 planets.forEach(p => {
-  p.addEventListener("click", () => {
-    window.open(p.dataset.url, "_blank");
+  p.addEventListener('click', () => {
+    const url = p.dataset.url;
+    if (url) window.open(url, '_blank', 'noopener');
   });
 });
-

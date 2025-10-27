@@ -1,62 +1,96 @@
+:root{
+  --size: min(90vmin, 900px);      /* carré -> orbites parfaitement rondes */
+  --cyan: #00e5ff;
+  --ring: rgba(0, 245, 255, .28);
+  --bg1: #061018;
+  --bg2: #00060a;
+}
+
+* { box-sizing: border-box; }
+
+html, body {
+  height: 100%;
+}
+
 body {
   margin: 0;
-  background: radial-gradient(circle at center, #0a0c10 40%, #000);
-  color: white;
-  font-family: "Segoe UI", sans-serif;
+  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+  color: #e8f6fb;
+  background: radial-gradient(120% 120% at 50% 40%, var(--bg1) 0%, var(--bg2) 70%);
+  display: grid;
+  place-items: center;
   overflow: hidden;
-  height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
-h1 {
+h1{
   position: absolute;
-  top: 20px;
+  top: 16px;
+  margin: 0;
   font-weight: 300;
-  letter-spacing: 2px;
+  letter-spacing: .06em;
+  color: #d7ecf7;
+  text-shadow: 0 0 10px rgba(0,0,0,.4);
 }
 
-.universe {
+.universe{
   position: relative;
-  width: 750px;
-  height: 750px;
+  width: var(--size);
+  height: var(--size);
+  /* guide externe type Holy Graph */
+  border-radius: 50%;
 }
 
-.orbit {
+.orbit{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 1px solid rgba(0, 255, 255, 0.3);
-  border-radius: 50%;
+  top: 50%; left: 50%;
   transform: translate(-50%, -50%);
+  border-radius: 50%;
+  border: 1.5px solid var(--ring);
+  box-shadow: 0 0 0 1px rgba(0,0,0,.25) inset;
 }
 
-/* Taille de chaque orbite (ronds visibles) */
-.orbit1 { width: 0px; height: 0px; }
-.orbit2 { width: 240px; height: 240px; }
-.orbit3 { width: 400px; height: 400px; }
-.orbit4 { width: 560px; height: 560px; }
-.orbit5 { width: 700px; height: 700px; }
+/* Diamètres des orbites (en px, dérivés de --size) */
+.orbit1{ width: 16px;  height: 16px;  }             /* point central */
+.orbit2{ width: calc(var(--size) * .33); height: calc(var(--size) * .33); }
+.orbit3{ width: calc(var(--size) * .52); height: calc(var(--size) * .52); }
+.orbit4{ width: calc(var(--size) * .71); height: calc(var(--size) * .71); }
+.orbit5{ width: calc(var(--size) * .88); height: calc(var(--size) * .88); }
 
-.planet {
+/* Bullles (projets) */
+.planet{
   position: absolute;
-  top: 50%;
-  left: 50%;
-  background: #00ffff;
-  color: #000;
-  border-radius: 50%;
-  padding: 10px 20px;
-  transform: translate(-50%, -50%);
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%); /* sera remplacé en JS */
+  border: 0;
+  padding: .55rem 1.1rem;
+  border-radius: 999px;             /* pastille façon Intra 42 */
+  background: var(--cyan);
+  color: #002430;
+  font-weight: 700;
+  font-size: clamp(12px, 1.6vmin, 16px);
+  box-shadow:
+    0 0 12px rgba(0, 229, 255, .9),
+    0 0 40px rgba(0, 229, 255, .35);
   cursor: pointer;
-  transition: all 0.3s ease;
-  font-weight: bold;
-  text-align: center;
-  box-shadow: 0 0 10px #00ffff;
+  transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
+  white-space: nowrap;
 }
 
-.planet:hover {
-  background: white;
-  transform: translate(-50%, -50%) scale(1.1);
+.planet:hover{
+  background: #fff;
+  color: #05141b;
+  box-shadow:
+    0 0 16px rgba(255,255,255,.9),
+    0 0 48px rgba(255,255,255,.35);
+  transform: translate(var(--tx, -50%), var(--ty, -50%)) scale(1.07);
 }
+
+/* Accessibilité */
+.planet:focus-visible{
+  outline: 2px solid #fff;
+  outline-offset: 2px;
+  box-shadow:
+    0 0 0 3px rgba(255,255,255,.5),
+    0 0 30px rgba(255,255,255,.35);
+}
+
