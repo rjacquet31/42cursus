@@ -1,61 +1,139 @@
-<link rel="stylesheet" href="style.css" />
-<div class="universe" id="universe">
-  <!-- Orbites visibles -->
-  <div class="orbit orbit1"></div>
-  <div class="orbit orbit2"></div>
-  <div class="orbit orbit3"></div>
-  <div class="orbit orbit4"></div>
-  <div class="orbit orbit5"></div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>42 Cursus — Holy Graph</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <h1>Mon parcours à 42</h1>
 
-  <!-- CENTRE -->
-  <button class="planet"
-    data-orbit="1" data-angle="0"
-    data-url="https://github.com/rjacquet31/Libft">Libft</button>
+  <div class="universe" id="universe">
 
-  <!-- ORBITE 2 (GNL / printf / B2BR) -->
-  <button class="planet"
-    data-orbit="2" data-angle="0"
-    data-url="https://github.com/rjacquet31/get_next_line">get_next_line</button>
-  <button class="planet"
-    data-orbit="2" data-angle="225"
-    data-url="https://github.com/rjacquet31/ft_printf">ft_printf</button>
-  <button class="planet"
-    data-orbit="2" data-angle="310"
-    data-url="https://github.com/rjacquet31/Born2beRoot">Born2beRoot</button>
+    <!-- ORBITES -->
+    <div class="orbit orbit1"></div>
+    <div class="orbit orbit2"></div>
+    <div class="orbit orbit3"></div>
+    <div class="orbit orbit4"></div>
+    <div class="orbit orbit5"></div>
+    <div class="orbit orbit6"></div>
+    <div class="orbit orbit7"></div>
 
-  <!-- ORBITE 3 (push_swap / minitalk / fract-ol) -->
-  <button class="planet"
-    data-orbit="3" data-angle="15"
-    data-url="https://github.com/rjacquet31/Push_swap">push_swap</button>
-  <button class="planet"
-    data-orbit="3" data-angle="200"
-    data-url="https://github.com/rjacquet31/minitalk">minitalk</button>
-  <button class="planet"
-    data-orbit="3" data-angle="110"
-    data-url="https://github.com/rjacquet31/fract-ol">fract-ol</button>
+    <!-- ORBIT 1 — Libft -->
+    <button class="planet"
+      data-orbit="1" data-angle="0"
+      data-url="https://github.com/rjacquet31/Libft">
+      Libft
+    </button>
 
-  <!-- ORBITE 4 (minishell / philosophers / so_long) -->
-  <button class="planet"
-    data-orbit="4" data-angle="20"
-    data-url="https://github.com/rjacquet31/MiniShell">minishell</button>
-  <button class="planet"
-    data-orbit="4" data-angle="210"
-    data-url="https://github.com/rjacquet31/Philosophers">philosophers</button>
-  <button class="planet"
-    data-orbit="4" data-angle="120"
-    data-url="https://github.com/rjacquet31/so_long">so_long</button>
+    <!-- ORBIT 2 — get_next_line, printf, b2br -->
+    <button class="planet"
+      data-orbit="2" data-angle="90"
+      data-url="https://github.com/rjacquet31/get_next_line">
+      get_next_line
+    </button>
 
-  <!-- ORBITE 5 (miniRT / cub3d / NetPractice / Cpp01) -->
-  <button class="planet"
-    data-orbit="5" data-angle="10"
-    data-url="https://github.com/rjacquet31/miniRT">miniRT</button>
-  <button class="planet"
-    data-orbit="5" data-angle="300"
-    data-url="https://github.com/rjacquet31/cub3d">cub3d</button>
-  <button class="planet"
-    data-orbit="5" data-angle="225"
-    data-url="https://github.com/rjacquet31/NetPractice">NetPractice</button>
-  <button class="planet"
-    data-orbit="5" data-angle="145"
-    data-url="https://github.com/rjacquet31/Cpp01">Cpp01</button>
-</div>
+    <button class="planet"
+      data-orbit="2" data-angle="330"
+      data-url="https://github.com/rjacquet31/ft_printf">
+      ft_printf
+    </button>
+
+    <button class="planet"
+      data-orbit="2" data-angle="210"
+      data-url="https://github.com/rjacquet31/Born2beRoot">
+      Born2beRoot
+    </button>
+
+    <!-- ORBIT 3 — push_swap / minitalk / fract-ol -->
+    <button class="planet"
+      data-orbit="3" data-angle="225"
+      data-url="https://github.com/rjacquet31/Push_swap">
+      push_swap
+    </button>
+
+    <button class="planet"
+      data-orbit="3" data-angle="300"
+      data-url="https://github.com/rjacquet31/minitalk">
+      minitalk
+    </button>
+
+    <button class="planet"
+      data-orbit="3" data-angle="10"
+      data-url="https://github.com/rjacquet31/fract-ol">
+      fract-ol
+    </button>
+
+    <!-- ORBIT 4 — minishell / philosophers -->
+    <button class="planet"
+      data-orbit="4" data-angle="30"
+      data-url="https://github.com/rjacquet31/MiniShell">
+      minishell
+    </button>
+
+    <button class="planet"
+      data-orbit="4" data-angle="150"
+      data-url="https://github.com/rjacquet31/Philosophers">
+      philosophers
+    </button>
+
+    <!-- ORBIT 5 — miniRT / NetPractice -->
+    <button class="planet"
+      data-orbit="5" data-angle="220"
+      data-url="https://github.com/rjacquet31/miniRT">
+      miniRT
+    </button>
+
+    <button class="planet"
+      data-orbit="5" data-angle="115"
+      data-url="https://github.com/rjacquet31/NetPractice">
+      NetPractice
+    </button>
+
+    <!-- ✅ CPP CLUSTER (sur ORBIT 5) -->
+    <div class="cpp-cluster"
+      data-orbit="5" data-angle="300">
+      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp00">CPP 00</button>
+      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp01">CPP 01</button>
+      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp02">CPP 02</button>
+      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp03">CPP 03</button>
+      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp04">CPP 04</button>
+    </div>
+
+    <!-- ORBIT 6 — webserv / inception -->
+    <button class="planet"
+      data-orbit="6" data-angle="240"
+      data-url="https://github.com/rjacquet31/webserv">
+      webserv
+    </button>
+
+    <button class="planet"
+      data-orbit="6" data-angle="60"
+      data-url="https://github.com/rjacquet31/inception">
+      inception
+    </button>
+
+	<!-- CPP CLUSTER (second : CPP05 → CPP09) -->
+	<div class="cpp-cluster2"
+  	  data-orbit="6" data-angle="140">
+  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp05">CPP 05</button>
+  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp06">CPP 06</button>
+  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp07">CPP 07</button>
+  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp08">CPP 08</button>
+  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp09">CPP 09</button>
+	</div>
+
+    <!-- ORBIT 7 — transcendance -->
+    <button class="planet"
+      data-orbit="7" data-angle="40"
+      data-url="https://github.com/rjacquet31/transcendence">
+      transcendance
+    </button>
+
+  </div>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
+

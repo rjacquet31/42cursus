@@ -1,96 +1,105 @@
-:root{
-  --size: min(90vmin, 900px);      /* carré -> orbites parfaitement rondes */
-  --cyan: #00e5ff;
-  --ring: rgba(0, 245, 255, .28);
-  --bg1: #061018;
-  --bg2: #00060a;
+:root {
+  --size: min(90vmin, 850px);
+
+  --cyan: #00eaff;
+  --ring: rgba(0, 255, 255, .25);
+
+  --planet-size: 80px;
+  --planet-cpp-size: 34px;
 }
 
 * { box-sizing: border-box; }
-
-html, body {
-  height: 100%;
-}
+html, body { height: 100%; }
 
 body {
   margin: 0;
-  font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
-  color: #e8f6fb;
-  background: radial-gradient(120% 120% at 50% 40%, var(--bg1) 0%, var(--bg2) 70%);
-  display: grid;
-  place-items: center;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: radial-gradient(circle at center, #09121a 20%, #000811 100%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow: hidden;
+  color: #e4fdff;
 }
 
-h1{
+h1 {
   position: absolute;
-  top: 16px;
-  margin: 0;
-  font-weight: 300;
-  letter-spacing: .06em;
-  color: #d7ecf7;
-  text-shadow: 0 0 10px rgba(0,0,0,.4);
+  top: 15px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  font-size: 28px;
 }
 
-.universe{
+.universe {
   position: relative;
   width: var(--size);
   height: var(--size);
-  /* guide externe type Holy Graph */
-  border-radius: 50%;
+  transform-origin: center center;
 }
 
-.orbit{
+/* ✅ ORBITES (ronds réels et calibrés) */
+.orbit {
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
   border-radius: 50%;
   border: 1.5px solid var(--ring);
-  box-shadow: 0 0 0 1px rgba(0,0,0,.25) inset;
+  transform: translate(-50%, -50%);
 }
 
-/* Diamètres des orbites (en px, dérivés de --size) */
-.orbit1{ width: 16px;  height: 16px;  }             /* point central */
-.orbit2{ width: calc(var(--size) * .33); height: calc(var(--size) * .33); }
-.orbit3{ width: calc(var(--size) * .52); height: calc(var(--size) * .52); }
-.orbit4{ width: calc(var(--size) * .71); height: calc(var(--size) * .71); }
-.orbit5{ width: calc(var(--size) * .88); height: calc(var(--size) * .88); }
+.orbit1 { width: 0;  height: 0; }
+.orbit2 { width: calc(var(--size)*.30); height: calc(var(--size)*.30); }
+.orbit3 { width: calc(var(--size)*.47); height: calc(var(--size)*.47); }
+.orbit4 { width: calc(var(--size)*.63); height: calc(var(--size)*.63); }
+.orbit5 { width: calc(var(--size)*.78); height: calc(var(--size)*.78); }
+.orbit6 { width: calc(var(--size)*.92); height: calc(var(--size)*.92); }
+.orbit7 { width: calc(var(--size)*1.05); height: calc(var(--size)*1.05); }
 
-/* Bullles (projets) */
-.planet{
+/* ✅ PLANÈTES */
+.planet {
   position: absolute;
-  top: 50%; left: 50%;
-  transform: translate(-50%, -50%); /* sera remplacé en JS */
-  border: 0;
-  padding: .55rem 1.1rem;
-  border-radius: 999px;             /* pastille façon Intra 42 */
+  top: 50%;
+  left: 50%;
+  width: var(--planet-size);
+  height: var(--planet-size);
+  border-radius: 50%;
   background: var(--cyan);
-  color: #002430;
-  font-weight: 700;
-  font-size: clamp(12px, 1.6vmin, 16px);
-  box-shadow:
-    0 0 12px rgba(0, 229, 255, .9),
-    0 0 40px rgba(0, 229, 255, .35);
   cursor: pointer;
-  transition: transform .2s ease, background .2s ease, color .2s ease, box-shadow .2s ease;
-  white-space: nowrap;
-}
-
-.planet:hover{
-  background: #fff;
-  color: #05141b;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+  color: #07242e;
   box-shadow:
-    0 0 16px rgba(255,255,255,.9),
-    0 0 48px rgba(255,255,255,.35);
-  transform: translate(var(--tx, -50%), var(--ty, -50%)) scale(1.07);
+    0 0 12px rgba(0,255,255,.9),
+    0 0 40px rgba(0,255,255,.35);
+  transform: translate(calc(-50% + var(--x, 0px)),
+                      calc(-50% + var(--y, 0px)));
+  transition: transform .16s;
 }
 
-/* Accessibilité */
-.planet:focus-visible{
-  outline: 2px solid #fff;
-  outline-offset: 2px;
-  box-shadow:
-    0 0 0 3px rgba(255,255,255,.5),
-    0 0 30px rgba(255,255,255,.35);
+.planet:hover {
+  transform: translate(calc(-50% + var(--x,0px)),
+                      calc(-50% + var(--y,0px))) scale(1.12);
+  background: white;
 }
 
+/* ✅ CLUSTERS CPP : centrés comme les planètes */
+.cpp-cluster, .cpp-cluster2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(calc(-50% + var(--x, 0px)),
+                      calc(-50% + var(--y, 0px)));
+}
+
+.cpp {
+  width: var(--planet-cpp-size);
+  height: var(--planet-cpp-size);
+  font-size: 8px;
+  padding: 0;
+  border-radius: 50%;
+}
