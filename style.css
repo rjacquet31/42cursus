@@ -24,23 +24,6 @@ h1 {
   height: 750px;
 }
 
-.orbit {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  border: 1px solid rgba(0, 255, 255, 0.2);
-  border-radius: 50%;
-  transform: translate(-50%, -50%);
-}
-
-/* Taille des cercles */
-.orbit1 { width: 100px; height: 100px; }
-.orbit2 { width: 220px; height: 220px; }
-.orbit3 { width: 360px; height: 360px; }
-.orbit4 { width: 520px; height: 520px; }
-.orbit5 { width: 680px; height: 680px; }
-
-/* Style général des planètes */
 .planet {
   position: absolute;
   top: 50%;
@@ -61,24 +44,3 @@ h1 {
   background: white;
   transform: translate(-50%, -50%) scale(1.1);
 }
-
-/* Positionnement manuel des projets sur les orbites */
-
-/* Orbit 2 : GNL / printf / Born2beRoot */
-.orbit2 .planet:nth-child(1) { transform: translate(-180%, -50%); }
-.orbit2 .planet:nth-child(2) { transform: translate(100%, -190%); }
-.orbit2 .planet:nth-child(3) { transform: translate(200%, 100%); }
-
-/* Orbit 3 : push_swap / minitalk / fract-ol */
-.orbit3 .planet:nth-child(1) { transform: translate(-220%, -150%); }
-.orbit3 .planet:nth-child(2) { transform: translate(200%, -250%); }
-.orbit3 .planet:nth-child(3) { transform: translate(250%, 150%); }
-
-/* Orbit 4 : minishell / philosophers */
-.orbit4 .planet:nth-child(1) { transform: translate(-330%, 0%); }
-.orbit4 .planet:nth-child(2) { transform: translate(330%, 0%); }
-
-/* Orbit 5 : miniRT / NetPractice / Cpp01 */
-.orbit5 .planet:nth-child(1) { transform: translate(-430%, -150%); }
-.orbit5 .planet:nth-child(2) { transform: translate(0%, 350%); }
-.orbit5 .planet:nth-child(3) { transform: translate(430%, 150%); }
