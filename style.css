@@ -103,3 +103,17 @@ h1 {
   padding: 0;
   border-radius: 50%;
 }
+
+/* 📱 Responsive mobile */
+@media (max-width: 700px) {
+  :root {
+    --size: 300px; /* un graph plus petit */
+    --planet-size: 55px;
+    --planet-cpp-size: 28px;
+  }
+
+  h1 {
+    font-size: 18px;
+    top: 10px;
+  }
+}
