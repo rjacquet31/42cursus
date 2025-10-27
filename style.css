@@ -1,0 +1,67 @@
+body {
+  margin: 0;
+  background: radial-gradient(circle at center, #0b0c10 40%, #000000);
+  color: white;
+  font-family: "Segoe UI", sans-serif;
+  overflow: hidden;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.universe {
+  position: relative;
+  width: 800px;
+  height: 800px;
+}
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(0, 255, 255, 0.2);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.orbit1 { width: 100px; height: 100px; }
+.orbit2 { width: 200px; height: 200px; }
+.orbit3 { width: 350px; height: 350px; }
+.orbit4 { width: 500px; height: 500px; }
+.orbit5 { width: 650px; height: 650px; }
+
+.planet {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  background: #00ffff;
+  color: #000;
+  border-radius: 50%;
+  padding: 10px 20px;
+  transform: translate(-50%, -50%);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-align: center;
+}
+
+.planet:hover {
+  background: #fff;
+  color: #000;
+  transform: translate(-50%, -50%) scale(1.1);
+}
+
+/* Placement manuel pour chaque planète */
+.orbit2 .planet:nth-child(1) { transform: translate(-180%, -50%); }
+.orbit2 .planet:nth-child(2) { transform: translate(80%, -200%); }
+
+.orbit3 .planet:nth-child(1) { transform: translate(-250%, -150%); }
+.orbit3 .planet:nth-child(2) { transform: translate(150%, -250%); }
+.orbit3 .planet:nth-child(3) { transform: translate(250%, 100%); }
+
+.orbit4 .planet:nth-child(1) { transform: translate(-350%, 50%); }
+.orbit4 .planet:nth-child(2) { transform: translate(350%, -50%); }
+
+.orbit5 .planet:nth-child(1) { transform: translate(-450%, -150%); }
+.orbit5 .planet:nth-child(2) { transform: translate(450%, 150%); }
