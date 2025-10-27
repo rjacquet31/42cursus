@@ -1,37 +1,30 @@
 const universe = document.getElementById("universe");
 const planets = [...universe.querySelectorAll(".planet")];
 
-// Groupes d’orbites selon le nombre d’éléments
-const orbits = [
-  [planets[0]], // orbit 1
-  planets.slice(1, 4), // orbit 2
-  planets.slice(4, 7), // orbit 3
-  planets.slice(7, 9), // orbit 4
-  planets.slice(9, 12), // orbit 5
-];
+const radii = [0, 120, 200, 280, 360]; // correspond aux orbit1..5
+const grouped = [[], [], [], [], [], []];
 
-// rayon en pixels (distance du centre)
-const radii = [0, 120, 200, 280, 360];
+// regroupe les planètes selon leur data-orbit
+planets.forEach(p => grouped[p.dataset.orbit].push(p));
 
-// Placer chaque planète sur son orbite circulaire
-orbits.forEach((group, i) => {
+// place chaque planète en cercle
+grouped.forEach((group, i) => {
+  if (!group.length) return;
   const radius = radii[i];
   const count = group.length;
 
   group.forEach((planet, index) => {
-    const angle = (index / count) * 2 * Math.PI; // angle en radians
+    const angle = (index / count) * 2 * Math.PI;
     const x = radius * Math.cos(angle);
     const y = radius * Math.sin(angle);
-
     planet.style.transform = `translate(${x}px, ${y}px)`;
   });
 });
 
-// Rendre les planètes cliquables
+// clic = ouvre le lien GitHub
 planets.forEach(p => {
   p.addEventListener("click", () => {
-    const url = p.dataset.url;
-    if (url) window.open(url, "_blank");
+    window.open(p.dataset.url, "_blank");
   });
 });
 

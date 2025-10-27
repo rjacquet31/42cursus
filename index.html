@@ -1,40 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>42 Cursus - Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>42 cursus - Graph interactif</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <h1>Mon parcours à 42</h1>
 
-  <div class="universe">
-    <div class="orbit orbit1">
-      <div class="planet" data-url="https://github.com/rjacquet31/Libft">Libft</div>
-    </div>
-    <div class="orbit orbit2">
-      <div class="planet" data-url="https://github.com/rjacquet31/ft_printf">ft_printf</div>
-      <div class="planet" data-url="https://github.com/rjacquet31/get_next_line">get_next_line</div>
-	  <div class="planet" data-url="https://github.com/rjacquet31/Born2beRoot">Born2beRoot</div>
-    </div>
-    <div class="orbit orbit3">
-      <div class="planet" data-url="https://github.com/rjacquet31/Push_swap">push_swap</div>
-      <div class="planet" data-url="https://github.com/rjacquet31/minitalk">minitalk</div>
-	  <div class="planet" data-url="https://github.com/rjacquet31/fract-ol">fract-ol</div>
-    </div>
-    <div class="orbit orbit4">
-      <div class="planet" data-url="https://github.com/rjacquet31/MiniShell">minishell</div>
-      <div class="planet" data-url="https://github.com/rjacquet31/Philosophers">philosophers</div>
-    </div>
-    <div class="orbit orbit5">
-      <div class="planet" data-url="https://github.com/rjacquet31/miniRT">miniRT</div>
-	  <div class="planet" data-url="https://github.com/rjacquet31/NetPractice">NetPractice</div>
-	  <div class="planet" data-url="https://github.com/rjacquet31/Cpp01">Cpp01</div>
-    </div>
+  <div class="universe" id="universe">
+    <!-- Orbites -->
+    <div class="orbit orbit1"></div>
+    <div class="orbit orbit2"></div>
+    <div class="orbit orbit3"></div>
+    <div class="orbit orbit4"></div>
+    <div class="orbit orbit5"></div>
+
+    <!-- Projets -->
+    <div class="planet" data-orbit="1" data-url="https://github.com/rjacquet31/Libft">Libft</div>
+
+    <div class="planet" data-orbit="2" data-url="https://github.com/rjacquet31/get_next_line">get_next_line</div>
+    <div class="planet" data-orbit="2" data-url="https://github.com/rjacquet31/ft_printf">ft_printf</div>
+    <div class="planet" data-orbit="2" data-url="https://github.com/rjacquet31/Born2beRoot">Born2beRoot</div>
+
+    <div class="planet" data-orbit="3" data-url="https://github.com/rjacquet31/Push_swap">push_swap</div>
+    <div class="planet" data-orbit="3" data-url="https://github.com/rjacquet31/minitalk">minitalk</div>
+    <div class="planet" data-orbit="3" data-url="https://github.com/rjacquet31/fract-ol">fract-ol</div>
+
+    <div class="planet" data-orbit="4" data-url="https://github.com/rjacquet31/MiniShell">minishell</div>
+    <div class="planet" data-orbit="4" data-url="https://github.com/rjacquet31/Philosophers">philosophers</div>
+
+    <div class="planet" data-orbit="5" data-url="https://github.com/rjacquet31/miniRT">miniRT</div>
+    <div class="planet" data-orbit="5" data-url="https://github.com/rjacquet31/NetPractice">NetPractice</div>
+    <div class="planet" data-orbit="5" data-url="https://github.com/rjacquet31/Cpp01">Cpp01</div>
   </div>
 
   <script src="script.js"></script>
 </body>
 </html>
-

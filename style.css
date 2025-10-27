@@ -1,6 +1,6 @@
 body {
   margin: 0;
-  background: radial-gradient(circle at center, #0b0c10 40%, #000000);
+  background: radial-gradient(circle at center, #0a0c10 40%, #000);
   color: white;
   font-family: "Segoe UI", sans-serif;
   overflow: hidden;
@@ -23,6 +23,22 @@ h1 {
   width: 750px;
   height: 750px;
 }
+
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px solid rgba(0, 255, 255, 0.3);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Taille de chaque orbite (ronds visibles) */
+.orbit1 { width: 0px; height: 0px; }
+.orbit2 { width: 240px; height: 240px; }
+.orbit3 { width: 400px; height: 400px; }
+.orbit4 { width: 560px; height: 560px; }
+.orbit5 { width: 700px; height: 700px; }
 
 .planet {
   position: absolute;
