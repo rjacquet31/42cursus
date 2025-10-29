@@ -19,7 +19,7 @@ Chaque projet a été une occasion d’apprendre une nouvelle compétence et d�
 ### 🌐 Voir mes projets en détail
 
 Pour une vue d’ensemble de mon parcours et une description détaillée de chaque projet,  
-rendez-vous sur 👉 **[mon holygraph 42](https://42evaluators.com/profile/tonlogin42)**  
+rendez-vous sur 👉 **[mon holygraph 42](https://rjacquet31.github.io/42cursus/)**  
 
 ---
 
