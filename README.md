@@ -1,28 +1,27 @@
-<h1 align="center">🎓 Mon parcours à l'école 42</h1>
-
+<h1 align="center">🎓 My journey at School 42</h1>
 <p align="center">
-  <em>Un apprentissage par projets, basé sur la logique, et l’autonomie.</em>
+  <em>Project-based learning, built on logic and autonomy.</em>
 </p>
 
 ---
 
-### 🧩 Mon expérience
+### 🧩 My experience
 
-J’ai commencé le cursus 42 par la **piscine**, un mois intensif qui m’a appris la rigueur, la logique et le travail en autonomie.  
-Depuis, j’ai progressé à travers des projets variés allant du **C bas-niveau** à la **programmation orientée objet**,  
-en passant par la **gestion mémoire, le shell, les algorithmes**, et plus récemment **le développement web et réseau**.
+I started the 42 cursus with the **piscine**, an intensive month that taught me rigor, logic and self-reliance.  
+Since then, I've progressed through a wide range of projects, from **low-level C** to **object-oriented programming**,  
+covering **memory management, the shell, algorithms**, and more recently **web and network development**.
 
-Chaque projet a été une occasion d’apprendre une nouvelle compétence et d’aller un peu plus loin dans ma compréhension du code.
+Every project has been a chance to learn a new skill and to push my understanding of code a little further.
 
 ---
 
-### 🌐 Voir mes projets en détail
+### 🌐 See my projects in detail
 
-Pour une vue d’ensemble de mon parcours et une description détaillée de chaque projet,  
-rendez-vous sur 👉 **[mon holygraph 42](https://rjacquet31.github.io/42cursus/)**  
+For an overview of my journey and a detailed description of each project,  
+head over to 👉 **[my 42 journey](https://rjacquet31.github.io/42cursus/)**
 
 ---
 
 <p align="center">
-  <em>“À 42, on n’apprend pas à coder. On apprend à apprendre.”</em> 💡
+  <em>"At 42, you don't learn to code. You learn how to learn."</em> 💡
 </p>
