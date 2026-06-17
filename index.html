@@ -3,137 +3,47 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>42 Cursus — Holy Graph</title>
+  <title>R. Jacquet — Parcours 42</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <h1>Mon parcours à 42</h1>
+  <!-- Fond animé -->
+  <div class="bg-grid" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--1" aria-hidden="true"></div>
+  <div class="bg-glow bg-glow--2" aria-hidden="true"></div>
 
-  <div class="universe" id="universe">
-
-    <!-- ORBITES -->
-    <div class="orbit orbit1"></div>
-    <div class="orbit orbit2"></div>
-    <div class="orbit orbit3"></div>
-    <div class="orbit orbit4"></div>
-    <div class="orbit orbit5"></div>
-    <div class="orbit orbit6"></div>
-    <div class="orbit orbit7"></div>
-
-    <!-- ORBIT 1 — Libft -->
-    <button class="planet"
-      data-orbit="1" data-angle="0"
-      data-url="https://github.com/rjacquet31/Libft">
-      Libft
-    </button>
-
-    <!-- ORBIT 2 — get_next_line, printf, b2br -->
-    <button class="planet"
-      data-orbit="2" data-angle="90"
-      data-url="https://github.com/rjacquet31/get_next_line">
-      get_next_line
-    </button>
-
-    <button class="planet"
-      data-orbit="2" data-angle="330"
-      data-url="https://github.com/rjacquet31/ft_printf">
-      ft_printf
-    </button>
-
-    <button class="planet"
-      data-orbit="2" data-angle="210"
-      data-url="https://github.com/rjacquet31/Born2beRoot">
-      Born2beRoot
-    </button>
-
-    <!-- ORBIT 3 — push_swap / minitalk / fract-ol -->
-    <button class="planet"
-      data-orbit="3" data-angle="225"
-      data-url="https://github.com/rjacquet31/Push_swap">
-      push_swap
-    </button>
-
-    <button class="planet"
-      data-orbit="3" data-angle="300"
-      data-url="https://github.com/rjacquet31/minitalk">
-      minitalk
-    </button>
-
-    <button class="planet"
-      data-orbit="3" data-angle="10"
-      data-url="https://github.com/rjacquet31/fract-ol">
-      fract-ol
-    </button>
-
-    <!-- ORBIT 4 — minishell / philosophers -->
-    <button class="planet"
-      data-orbit="4" data-angle="30"
-      data-url="https://github.com/rjacquet31/MiniShell">
-      minishell
-    </button>
-
-    <button class="planet"
-      data-orbit="4" data-angle="150"
-      data-url="https://github.com/rjacquet31/Philosophers">
-      philosophers
-    </button>
-
-    <!-- ORBIT 5 — miniRT / NetPractice -->
-    <button class="planet"
-      data-orbit="5" data-angle="220"
-      data-url="https://github.com/rjacquet31/miniRT">
-      miniRT
-    </button>
-
-    <button class="planet"
-      data-orbit="5" data-angle="115"
-      data-url="https://github.com/rjacquet31/NetPractice">
-      NetPractice
-    </button>
-
-    <!-- ✅ CPP CLUSTER (sur ORBIT 5) -->
-    <div class="cpp-cluster"
-      data-orbit="5" data-angle="300">
-      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp00">CPP 00</button>
-      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp01">CPP 01</button>
-      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp02">CPP 02</button>
-      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp03">CPP 03</button>
-      <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp04">CPP 04</button>
+  <!-- Panneau de description (suit la souris) -->
+  <div class="info-card" id="infoCard" role="tooltip" aria-hidden="true">
+    <div class="info-card__head">
+      <span class="info-card__tag" id="infoTag">Projet</span>
+      <h3 class="info-card__title" id="infoTitle"></h3>
     </div>
-
-    <!-- ORBIT 6 — irc / inception -->
-    <button class="planet"
-      data-orbit="6" data-angle="240"
-      data-url="https://github.com/rjacquet31/irc">
-      irc
-    </button>
-
-    <button class="planet"
-      data-orbit="6" data-angle="60"
-      data-url="https://github.com/rjacquet31/inception">
-      inception
-    </button>
-
-	<!-- CPP CLUSTER (second : CPP05 → CPP09) -->
-	<div class="cpp-cluster2"
-  	  data-orbit="6" data-angle="140">
-  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp05">CPP 05</button>
-  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp06">CPP 06</button>
-  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp07">CPP 07</button>
-  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp08">CPP 08</button>
-  	  <button class="planet cpp" data-url="https://github.com/rjacquet31/Cpp09">CPP 09</button>
-	</div>
-
-    <!-- ORBIT 7 — transcendance -->
-    <button class="planet"
-      data-orbit="7" data-angle="40"
-      data-url="https://github.com/rjacquet31/transcendence">
-      transcendance
-    </button>
-
+    <p class="info-card__desc" id="infoDesc"></p>
+    <div class="info-card__foot">
+      <span class="info-card__stack" id="infoStack"></span>
+      <span class="info-card__link">Voir sur GitHub →</span>
+    </div>
   </div>
+
+  <header class="hero">
+    <p class="hero__eyebrow">Holy Graph · École 42</p>
+    <h1 class="hero__title">Mon parcours à <span>42</span></h1>
+    <p class="hero__sub">
+      Chaque carte est un projet du cursus, du tronc commun jusqu'à la spécialisation.
+      Survolez un projet pour le découvrir, cliquez pour ouvrir le dépôt GitHub.
+    </p>
+    <div class="hero__stats" id="heroStats"></div>
+  </header>
+
+  <main class="board" id="board"></main>
+
+  <footer class="footer">
+    <p>R. Jacquet · Cursus 42 · <a href="https://github.com/rjacquet31" target="_blank" rel="noopener">github.com/rjacquet31</a></p>
+  </footer>
 
   <script src="script.js" defer></script>
 </body>
 </html>
-
